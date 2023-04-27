@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+
+
+{% block head %}
+{% endblock %}
+
+<body>
+    {% block content %}
+    {% endblock %}
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <!-- <div class="chatbox__image--header">
+                        <img style="border-radius: 50px" src="{{ url_for('static', path='/images/bott7.png') }}"
+                            alt="image">
+                    </div> -->
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">BotCBT</h4>
+                        <p class="chatbox__description--header">{{time}}</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div id="messages"></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img style="border-radius: 50px;"
+                        src="{{ url_for('static', path='/images/logo4.jpg') }}" /></button>
+            </div>
+        </div>
+    </div>
+    {% block scripts %}
+    {% endblock %}
+
+
+</body>
+
+</html>
